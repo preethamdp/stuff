@@ -1,0 +1,227 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.first-part,.spacer,.menu{
+    display: inline-block;
+    flex-direction: row;
+}
+.first-part{
+    display: flex;
+    width: 80%;
+    float: left;
+    margin: 0;
+    flex: 2;
+}
+.spacer{
+    width: 10%;
+}
+.menu{
+    float: right;
+    flex: 1;
+}
+.header img{
+    width:86px;
+    padding: 8px;
+}
+.header h1{
+    font-weight: 800;
+    font-size: 28px;
+    margin: 0;
+    padding:  8px 0 8px 8px;
+}
+#menu{
+    height: 25px;
+    width: auto;
+    opacity: 0.7;
+    cursor: pointer;
+    
+}
+
+.menu-content img{
+    width: 20px;
+    cursor: pointer;
+}
+.menu:hover .menu-content{
+    display: flex;
+} 
+.menu-content:hover{
+    display: flex;
+}
+.menu-content{
+    position: absolute;
+    right: 1rem;
+    top: 2.25rem;
+    display: none;
+    flex-direction: row;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 10;
+    background-color: white;
+    padding: 0 12px;
+
+}
+.menu-content .helpsupport{
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+
+
+.banner{
+    z-index: -1;
+    margin-top: 2rem;
+    width: 100%;
+    height: 40px;
+    background: #6441A5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* border-bottom: 30px solid  #2a0845;
+    border-left: 25px solid transparent; */
+}
+
+.content{
+    width: 30%;
+    display: block;
+    margin: auto;
+    margin-top: 5rem;
+    padding: 3rem 4.5rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 12px;
+    background-color: white;
+}
+.content h1{
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+.input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #d3d3d3;
+    transition: 0.2s all;
+    cursor: text;
+  }
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #111;
+  }
+  input:invalid {
+    outline: 0;
+     /* color: #ff2300;
+     border-color: #ff2300; */
+  }
+  input:focus,
+  input:valid {
+    border-color: #460073;
+  }
+  input:focus~label,
+  input:valid~label {
+    font-size: 14px;
+    top: -24px;
+    color: #460073;
+  }
+
+
+  .content button{
+      width: 100%;
+      margin-top: 4rem;
+      color: white;
+      background-color:#460073 ;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+
+  .content .lower-part{
+      margin-top: 2.5rem;
+  }
+  .firsttime,.forgetpwd{
+      display: inline;
+  }
+  .content .lower-part .firsttime{
+      float: left;
+  }
+  .content .lower-part .forgetpwd{
+    float: right;
+  }
+  .content .lower-part a{
+      text-decoration: none;
+      color: #460073;
+      font-size: 14px;
+      opacity: 0.9;
+  }
+
+  .footer{
+      position: absolute;
+      bottom: 0;
+      font-size: 10px;
+      background-color: #460073;
+      color: white;
+      padding:0 0.5rem;
+  }
+
+
+
+  @media only screen and (max-width: 800px) {
+    .content{
+        width: 60%;
+        padding: 2rem;
+        font-size: 14px;
+    }
+    .header img{
+        width: 60px;
+    }
+    .menu-content img{
+        width: 18px;
+    }
+    .first-part h1{
+        font-size: 24px;
+    }
+    .content h1{
+        font-size: 22px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .content{
+        width: 70%;
+        padding: 2rem;
+        font-size: 12px;
+    }
+    .header .first-part img{
+        width: 60px;
+        display:none;
+    }
+    .menu-content img{
+        width: 16px;
+       
+       
+    }
+    .first-part h1{
+        font-size: 16px;
+    }
+    .content h1{
+        font-size: 16px;
+    }
+  }
